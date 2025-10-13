@@ -39,6 +39,7 @@ jobs:
           else
             npx playwright test --project=${{ github.event.inputs.browser }}
           fi
-          
+
       - name: Publish Test Summary Results
+        if: always()
         run: npx github-actions-ctrf ctrf/ctrf-report.json     
