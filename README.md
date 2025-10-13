@@ -59,10 +59,10 @@ HelloBooks.ai-Assignment/
 ```bash
 git clone https://github.com/rsdk1/HelloBooks.ai-Assignment.git
 cd HelloBooks.ai-Assignment
----
 
+---
  AUTHOR : RajaSuma.D.K
- Linkedin:www.linkedin.com/in/rsdk 
+ Linkedin: www.linkedin.com/in/rsdk 
  Github: https://github.com/rsdk1
  Website: https://rsdk.my.canva.site/
 
