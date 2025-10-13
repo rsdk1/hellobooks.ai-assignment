@@ -60,6 +60,9 @@ HelloBooks.ai-Assignment/
 git clone https://github.com/rsdk1/HelloBooks.ai-Assignment.git
 cd HelloBooks.ai-Assignment
 ---
-Author:RajaSuma.D.K
-LinkedIn:
-GitHub: 
+
+ AUTHOR : RajaSuma.D.K
+ Linkedin:www.linkedin.com/in/rsdk 
+ Github: https://github.com/rsdk1
+ Website: https://rsdk.my.canva.site/
+
