@@ -12,6 +12,7 @@ on:
           - chromium
           - firefox
           - webkit
+
 permissions:
   contents: write
 
@@ -26,7 +27,7 @@ jobs:
       - name: Setup Node.js
         uses: actions/setup-node@v4
         with:
-          node-version: 18
+          node-version: 20
 
       - name: Install dependencies
         run: npm ci
@@ -34,10 +35,14 @@ jobs:
       - name: Install Playwright Browsers
         run: npx playwright install --with-deps
 
+      - name: Create CTRF directory
+        run: mkdir -p ctrf
+
       - name: Run Playwright tests
-        run: npx playwright test hellobooks-ai.spec.js --project=${{ inputs.browser }} --workers=${{ inputs.workers }}
+        run: npx playwright test hellobooks-ai.spec.js --project=${{ inputs.browser }}
         continue-on-error: true
 
       - name: Publish Test Summary Results
         if: always()
-        run: npx github-actions-ctrf ctrf/ctrf-report.json     
+        run: npx github-actions-ctrf ctrf/ctrf-report.json
+   
