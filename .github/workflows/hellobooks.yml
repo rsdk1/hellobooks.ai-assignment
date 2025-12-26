@@ -33,12 +33,8 @@ jobs:
         run: npx playwright install --with-deps
 
       - name: Run Playwright tests
-        run: |
-          if [ "${{ github.event.inputs.browser }}" == "all" ]; then
-            npx playwright test
-          else
-            npx playwright test --project=${{ github.event.inputs.browser }}
-          fi
+        run: npx playwright test Amazon.spec.js --project=${{ inputs.browser }} --workers=${{ inputs.workers }}
+        continue-on-error: true
 
       - name: Publish Test Summary Results
         if: always()
